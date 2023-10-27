@@ -26,4 +26,12 @@ const deleteData = (id) => {
     
     return dbPool.query(query, [id]);
 }
-export { getData, createData, getDataById, deleteData }
+
+const updateData = (id) => {
+    const query = "UPDATE FROM users WHERE user_id = ?";
+    
+    return dbPool.query(query, [id]);
+}
+
+
+export { getData, createData, getDataById, deleteData, updateData }
